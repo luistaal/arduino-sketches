@@ -8,6 +8,7 @@ Este repositorio consta de los siguientes bocetos. Organizados por grupos.
 
 ### Millis()
 
+- 36-e1-multitarea-millis-nano: Multitarea con 3 procesos: un reloj, un interruptor de led y una alarma.
 - 37-e1-interruptor-millis-largo-corto: Control de pulsaciones (corta/larga) usando millis().
 - 37-e2-interruptor-millis-largo-corto: Detección durante la pulsación (corta/larga) usando millis().
 
