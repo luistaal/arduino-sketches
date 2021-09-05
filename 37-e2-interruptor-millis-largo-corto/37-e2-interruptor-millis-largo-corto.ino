@@ -1,11 +1,11 @@
 /**
-   @file     37-e2-interruptor-millis-largo-corto.ino
-   @author   luistaal, 2021/07
-   @brief    Detección durante la pulsación (corta/larga) usando millis()
-
-   @attention
-   Distribuida bajo licencia GNU General Public License V3
-*/
+ * @brief Detección durante la pulsación (corta/larga) usando millis()
+ * @file 37-e2-interruptor-millis-largo-corto.ino
+ * @author luistaal - https://github.com/luistaal
+ * @date 2021-07
+ * @version 0.1
+ * @attention Distribuida bajo licencia GNU General Public License V3
+ */
 
 const uint8_t pinLed = 13;            // declare pin 13 for led
 const uint8_t pinButton = 12;         // declare pin 12 for button
@@ -29,20 +29,20 @@ void loop() {
 
   // detected in state button on actived
   if (buttonState == 0) {
-		if (initialTime == 0) initialTime = millis();
-		
-		if ((millis() - initialTime) > longPressTime) {
-			Serial.println("2 seconds have passed.");
-			initialTime = millis();
-			Serial.println(initialTime);
-			blinkSwitch = !blinkSwitch;
-		}
+    if (initialTime == 0) initialTime = millis();
+
+    if ((millis() - initialTime) > longPressTime) {
+      Serial.println("2 seconds have passed.");
+      initialTime = millis();
+      Serial.println(initialTime);
+      blinkSwitch = !blinkSwitch;
+    }
   }
 
-	// detected in state button on desactivated
-	if (buttonState == 1) {
-		initialTime = 0;
-	}
+  // detected in state button on desactivated
+  if (buttonState == 1) {
+    initialTime = 0;
+  }
 
   // activated the flashing of the led
   if (blinkSwitch == 1) {

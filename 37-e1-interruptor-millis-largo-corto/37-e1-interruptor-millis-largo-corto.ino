@@ -1,29 +1,29 @@
 /**
-   @file     37-e1-interruptor-millis-largo-corto.ino
-   @author   luistaal, 2021/06
-   @brief    Control de pulsaciones (corta/larga) usando millis()
+ * @brief Control de pulsaciones (corta/larga) usando millis()
+ * @file 37-e1-interruptor-millis-largo-corto.ino
+ * @author luistaal - https://github.com/luistaal
+ * @date 2021-06
+ * @version 0.1
+ * @attention Distribuida bajo licencia GNU General Public License V3
+ */
 
-   @attention
-   Distribuida bajo licencia GNU General Public License V3
-*/
+const uint8_t pinLed = 13;              // declare pin 13 for led
+const uint8_t pinButton = 12;           // declare pin 12 for button
+const uint16_t onDuraction = 100;       // duraction time activated of led
+const uint16_t offDuraction = 500;      // duraction time desactivated of led
+const uint16_t longPressTime = 2500;    // long press time of button
 
-const uint8_t pinLed = 13;             // declare pin 13 for led
-const uint8_t pinButton = 12;		      // declare pin 12 for button
-const uint16_t onDuraction = 100;      // duraction time activated of led
-const uint16_t offDuraction = 500;     // duraction time desactivated of led
-const uint16_t longPressTime = 2500;   // long press time of button
-
-uint8_t previousButtonState = 1;	      // previous button state for push control
-unsigned long initialTime = 0;		   // control initial time of push button
-unsigned long finalTime = 0;		      // control final time of push button
-unsigned long rememberTime = 0;	      // remember time for duration led blink
-uint8_t ledState = 1;				      // led status for high or low
-uint8_t blinkSwitch = 0;			      // switch for activated/desactivated led blink
+uint8_t previousButtonState = 1;        // previous button state for push control
+unsigned long initialTime = 0;          // control initial time of push button
+unsigned long finalTime = 0;            // control final time of push button
+unsigned long rememberTime = 0;         // remember time for duration led blink
+uint8_t ledState = 1;                   // led status for high or low
+uint8_t blinkSwitch = 0;                // switch for activated/desactivated led blink
 
 void setup() {
-  Serial.begin(9600);         // define serial port 9600
-  pinMode(pinLed, OUTPUT); 	// define pinLED as output
-  pinMode(pinButton, INPUT);  // define pinButton as input
+  Serial.begin(9600);           // define serial port 9600
+  pinMode(pinLed, OUTPUT);      // define pinLED as output
+  pinMode(pinButton, INPUT);    // define pinButton as input
 }
 
 void loop() {
