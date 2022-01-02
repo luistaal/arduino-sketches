@@ -12,6 +12,11 @@ Este repositorio consta de los siguientes bocetos. Organizados por grupos.
 - 37-e1-interruptor-millis-largo-corto: Control de pulsaciones (corta/larga) usando millis().
 - 37-e2-interruptor-millis-largo-corto: Detección durante la pulsación (corta/larga) usando millis().
 
+### Interruptor de botón pulsador
+
+- 49-e1-utilizar-un-boton-como-toogle-switch: Interruptor pulsador como toogle switch usando la función delay().
+- 49-e2-utilizar-un-boton-como-toogle-switch: Interruptor pulsador como toogle switch usando la función millis().
+
 ## Licencia
 
 El código fuente de este proyecto se publica bajo la licencia "GNU General Public License V3".
