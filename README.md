@@ -15,7 +15,8 @@ Este repositorio consta de los siguientes bocetos. Organizados por grupos.
 
 - 36-e1-multitarea-millis-nano: Multitarea con 3 procesos: un reloj, un interruptor de led y una alarma.
 - 37-e1-interruptor-millis-largo-corto: Control de pulsaciones (corta/larga) usando millis().
-- 37-e2-interruptor-millis-largo-corto: Detección durante la pulsación (corta/larga) usando millis().
+- 37-e2-interruptor-millis-largo-
+- 65-pausar-reanudar-temporalizador-con-millis: Temporalizador que pausa y reanuda el tiempo usando pulsadores y millis.
 
 ### PCF8574
 - 62-e1-expansor-pcf8574-pulsador-delay: Control de un pulsador con delay utilizando el PCF8574.
